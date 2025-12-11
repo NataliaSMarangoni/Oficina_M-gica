@@ -342,7 +342,7 @@ header img {
 #Cursos {
 
     display: flex;
-    height: 80px;
+    height: 800px;
 }
 
 .Cursos {
@@ -384,4 +384,204 @@ header img {
     height: 600px;
 
 
+}
+
+#horario_de_funcionamento{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---------- Contato ----------- */
+
+.formulario{
+    background-color: var(--Azul);
+}
+
+
+#contato {
+    text-align: center;
+    padding-bottom: 100px;
+    margin-top: 100px;
+}
+
+#contato .titulo{
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+.titulo h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+.titulo h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+#contato h2{
+    margin-left: 5px;
+}
+
+#contato form{
+    max-width: 980px;
+    width: 90%;
+
+    margin: 0 auto;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: solid 3px var(--Azul);
+    border-radius: 40px;
+    background-color: var(--Azul);
+
+    color: var(--preto);
+    font-family: "Recursive", sans-linear;
+    font-size: 17px;
+}
+
+.campo{
+    width: 60%;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.campo-descricao {
+    width: 60%;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.campo input{
+    height: 40px;
+
+    color: var(--verde);
+    background-color: var(--fundo);
+
+    border: none;
+    border-radius: 4px;
+
+    text-indent: 10px;
+    outline: none;
+}
+
+.campo-descricao textarea{
+    color: var(--preto);
+    background-color: var(--fundo);
+
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+
+    resize: none;
+}
+
+.campo label,
+.campo-descricao label{
+    margin-bottom: 15px;
+}
+
+.campo input,
+.campo-descricao textarea{
+    font-family: "Recursive", sans-linear;
+    font-size: 17px;
+}
+
+.campo input::placeholder,
+.campo-descricao textarea::placeholder{
+    color: var(--fundo);
+}
+
+.campo input:focus,
+.campo-descricao textarea:focus{
+    outline: 2px solid var(--verde);
+}
+
+#contato form button{
+    height: 40px;
+    width: 60%;
+
+    background-color: var(--laranja);
+    color: var(--preto);
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 17px;
+    font-family: "Recursive", sans-linear-bold;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+#contato form button:hover{
+    background-color: var(--verde);
+}
+
+#footer-final {
+    background: var(--laranja);
+    padding: 60px 0 30px 0;
+    color: #e8e8e8;
+    font-family: "Montserrat", sans-serif;
+}
+
+.footer-cols {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer-cols .col {
+    width: 300px;
+    text-align: center;
+}
+
+.footer-cols h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-social img {
+    width: 35px;
+    margin: 10px;
+    opacity: .9;
+    transition: .3s;
+    filter: brightness(0) invert(1);
+    /* deixa o ícone branco */
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+.copy {
+    text-align: center;
+    margin-top: 40px;
+    opacity: .7;
+    font-size: 16px;
 }
