@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+
+    --vermelho: #FF0017;
+    --laranja: #FF7700;
+    --verde: #4AFF50;
+    --amarelo: #FFEA00;
+    --Azul: #00AAFF;
+    --Rosa: #FF69EB;
+    --preto: #000;
+    --fundo: #f3f2f2;
+
+}
+
+.espaco_lateral {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+/* ---------Menu--------- */
+header {
+    height: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header img {
+    width: 155px;
+}
+
+.menu {
+
+    max-width: 700px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a {
+    font-size: 20px;
+    color: var(--preto);
+    text-transform: uppercase;
+
+    font-family: "inter", sans-serif;
+
+}
+
+.menu a:hover {
+    color: var(--Azul);
+}
+
+/* --------Menu Hamburguer-------- */
+#icone-barras,
+#icone-x,
+#menu_botao {
+    display: none;
+}
+
+
+/* ---------- Reponsividade ---------------- */
+@media screen and (max-width: 768px) {
+    #sombra {
+        background-color: var(--Azul);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menu_botao {
+        display: block;
+        z-index: 1;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg {
+        fill: var(--verde);
+    }
+
+    #icone-barras {
+        display: block;
+    }
+
+    nav.menu {
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a {
+        color: var(--branco);
+    }
+}
+
+#cabeca {
+    background-color: var(--laranja);
+}
+
+.banner {
+    background-image: url(./img/Banner.png);
+    height: 500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -10px;
+
+}
+
+.fundo {
+    width: 100%;
+    /* lado esquerdo      */
+    height: 200px;
+    /* embaixo        */
+    background-color: var(--laranja);
+    position: relative;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#Sobre {
+    display: flex;
+    height: 800px;
+}
+
+.sobre {
+    display: flex;
+    text-align: right;
+    margin-top: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    flex-direction: column;
+}
+
+.descricao p {
+    text-align: flex;
+    text-transform: none;
+    align-items: center;
+    text-align: right;
+    font-size: 28px;
+    height: 50px;
+
+
+}
+
+.imgs img {
+    display: flex;
+    height: 600px;
+    border-radius: 15%;
+}
+
+.imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    margin-top: 25%;
+
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--Rosa);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+
+
+}
+
+/* cards */
+
+.produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 70px;
+    margin-top: 40px;
+}
+
+.produtos img {
+    display: block;
+    margin: 50%;
+    margin-top: 500px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 50%;
+    margin: 50px;
+
+}
+
+.produtos2 {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 70px;
+    height: -40px;
+    margin-top: 70px;
+    margin: 100px;
+}
+
+.produtos2 img {
+    margin-top: 25px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+#Cursos {
+
+    display: flex;
+    height: 80px;
+}
+
+.Cursos {
+
+    display: flex;
+    text-align: right;
+    margin-top: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+
+}
+
+.Cursos p {
+    text-align: flex;
+    text-transform: none;
+    align-items: center;
+    text-align: right;
+    font-size: 28px;
+    height: 50px;
+    margin-left: 25px;
+
+}
+
+.img2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    margin-top: 25%;
+
+}
+
+.img2 img {
+
+    display: flex;
+    height: 600px;
+
+
+}
